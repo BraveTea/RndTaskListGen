@@ -27,7 +27,7 @@ def task_set_lst_full():
 
   return task_set_lst_full 
 
-#prints the tasks per student times the studentsAmount variable
+#prints a number of students (all with their own personal task list), equal to the studentsAmount variable
 for i in range(studentsAmount):
   print("Student {0}: {1}".format(i+1,task_set_lst_full()))
 
