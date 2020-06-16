@@ -1,0 +1,27 @@
+import random
+  
+def task_set(min, max, amount):
+  rndLst = []
+  while len(rndLst) < amount:
+    x = random.randint(min, max)
+    if x not in rndLst:
+      rndLst.append(x)
+  rndLst.sort()
+  return rndLst
+
+def task_set_lst_full():
+  task_set_lst_full = []
+  set1 = task_set(1,6,1)
+  set2 = task_set(7,11,1)
+  set3 = task_set(12,16,2)
+  set4 = task_set(17,19,2)
+  
+  setLst = [set1, set2, set3, set4]
+  for set in setLst:
+    for each in set:
+      task_set_lst_full.append(each)
+
+  return task_set_lst_full 
+
+for i in range(44):
+  print("Student {0}: {1}".format(i+1,task_set_lst_full()))
